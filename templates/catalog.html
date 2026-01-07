@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}HTBooks: Catalog{% endblock %}
+
+{% block content %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>ISBN</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in books %}
+        <tr>
+            <td>{{ book[0] }}</td>
+            <td>{{ book[1] }}</td>
+            <td><a href="#" class="button {{ '' if book[2] == 2 else 'is-success' }}">{{ "Available" if book[2] == 1 else "Not available" }}</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,17 @@
+html {
+    background: #56473a;
+}
+
+.container {
+    background: #fff;
+}
+
+.is-primary {
+    background: #cdc0a8 !important;
+}
+
+.footer {
+    position:relative;
+    bottom:0;
+    width:100%;
+}
